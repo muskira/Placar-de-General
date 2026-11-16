@@ -346,7 +346,7 @@ $("btnRankReset").addEventListener("click", () => {
     renderRank();
 });
 
-// ----- exportação da classificação -----
+// ----- exportação da classificação 2026 -----
 $("btnRankTxt").addEventListener("click", () => {
     const list = stats();
     const pad = (s, w) => String(s).slice(0, w - 1).padEnd(w);
