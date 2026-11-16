@@ -1,0 +1,30 @@
+# 🎲 Placar General
+
+Placar para o jogo **General** (5 dados), feito em HTML, CSS e JavaScript puro, com visual de bloco de notas sobre fundo verde.
+
+## Recursos
+- De 1 a 10 jogadores, com nomes editáveis (clique no nome)
+- Parte superior (1 a 6) com valores limitados: 5, 10, 15, 20, 25 e 30
+- Parte inferior: **F** Fula (30), **S** Sequência (25), **Q** Quadra (40), **G** General (50) e **G** General 2 (50)
+- Jogada de **mão** (🧤): +5 pontos
+- Total, vencedor e classificação da partida
+- Aba **Classificação** com vitórias, partidas, pontos e média de cada jogador
+- Exportação em **TXT** e **Excel (.xlsx)**
+- Salvamento automático no navegador
+
+## Como usar
+Abra o `index.html` no navegador. Não precisa instalar nada.
+
+Para jogar online, ative o GitHub Pages no repositório (*Settings → Pages → Deploy from a branch → main / root*).
+
+## Regras personalizáveis
+No topo do `script.js` estão os valores do jogo (`ROWS`, `MAO_BONUS`), fáceis de alterar.
+
+## Arquivos
+| Arquivo | Função |
+|---|---|
+| `index.html` | Estrutura da página |
+| `style.css` | Visual (fundo verde e bloco de notas) |
+| `script.js` | Regras, classificação e exportações |
+
+> O Excel usa a biblioteca [SheetJS](https://sheetjs.com/), carregada da internet apenas ao exportar.

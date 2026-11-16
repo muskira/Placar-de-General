@@ -4,64 +4,66 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Placar General - 5 dados</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎲%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="toolbar">
-  <h1>🎲 General</h1>
-  <nav class="tabs">
-    <button data-view="game" class="active">Placar</button>
-    <button data-view="rank">🏆 Classificação</button>
-  </nav>
+  <header class="toolbar">
+    <h1>🎲 General</h1>
 
-  <!-- ferramentas da partida -->
-  <div class="tools" id="gameTools">
-    <label>Jogadores:
-      <select id="numPlayers"></select>
-    </label>
-    <button id="btnResult">Resultado parcial</button>
-    <button id="btnFinish" class="primary">Encerrar partida</button>
-    <button id="btnReset" class="danger">Resetar</button>
-    <button id="btnTxt">Exportar TXT</button>
-    <button id="btnXlsx">Exportar Excel</button>
-    <span class="hint">Clique no nome para renomear</span>
-  </div>
+    <nav class="tabs">
+      <button data-view="game" class="active">Placar</button>
+      <button data-view="rank">🏆 Classificação</button>
+    </nav>
 
-  <!-- ferramentas da classificação -->
-  <div class="tools" id="rankTools" hidden>
-    <button id="btnUndo">Desfazer última partida</button>
-    <button id="btnRankReset" class="danger">Zerar classificação</button>
-    <button id="btnRankTxt">Exportar TXT</button>
-    <button id="btnRankXlsx">Exportar Excel</button>
-  </div>
-</header>
-
-<main>
-  <!-- PLACAR DA PARTIDA -->
-  <div class="notepad" id="viewGame">
-    <div class="table-wrap">
-      <table id="board"></table>
+    <!-- ferramentas da partida -->
+    <div class="tools" id="gameTools">
+      <label>Jogadores:
+        <select id="numPlayers"></select>
+      </label>
+      <button id="btnResult">Resultado parcial</button>
+      <button id="btnFinish" class="primary">Encerrar partida</button>
+      <button id="btnReset" class="danger">Resetar</button>
+      <button id="btnTxt">Exportar TXT</button>
+      <button id="btnXlsx">Exportar Excel</button>
+      <span class="hint">Clique no nome para renomear</span>
     </div>
-    <section id="status" class="status"></section>
-  </div>
 
-  <!-- CLASSIFICAÇÃO GERAL -->
-  <div class="notepad" id="viewRank" hidden>
-    <h2 class="rank-title">Classificação geral</h2>
-    <div class="table-wrap">
-      <table id="rankTable" class="rank"></table>
+    <!-- ferramentas da classificação -->
+    <div class="tools" id="rankTools" hidden>
+      <button id="btnUndo">Desfazer última partida</button>
+      <button id="btnRankReset" class="danger">Zerar classificação</button>
+      <button id="btnRankTxt">Exportar TXT</button>
+      <button id="btnRankXlsx">Exportar Excel</button>
     </div>
-    <section id="rankInfo" class="status"></section>
-  </div>
-</main>
+  </header>
 
-<dialog id="dlg"></dialog>
+  <main>
+    <!-- PLACAR DA PARTIDA -->
+    <div class="notepad" id="viewGame">
+      <div class="table-wrap">
+        <table id="board"></table>
+      </div>
+      <section id="status" class="status"></section>
+    </div>
 
-<!-- SheetJS: usado apenas para exportar o Excel -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-<script src="script.js"></script>
+    <!-- CLASSIFICAÇÃO GERAL -->
+    <div class="notepad" id="viewRank" hidden>
+      <h2 class="rank-title">Classificação geral</h2>
+      <div class="table-wrap">
+        <table id="rankTable" class="rank"></table>
+      </div>
+      <section id="rankInfo" class="status"></section>
+    </div>
+  </main>
+
+  <dialog id="dlg"></dialog>
+
+  <!-- SheetJS: usado apenas para exportar o Excel -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
